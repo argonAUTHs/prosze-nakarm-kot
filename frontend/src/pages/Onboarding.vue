@@ -2,13 +2,13 @@
   <q-page class="row items-center justify-evenly">
     <q-card class="my-card">
       <q-card-section>
-        <div>
-          <q-input outlined v-model="issuerId" label="Issuer">
-            <template v-slot:after>
-              <q-btn color="primary" size="lg" label="Render QR Code" @click="getQRCode" />
-            </template>
-          </q-input>
-        </div>
+        <q-input outlined v-model="issuerId" label="Issuer ID">
+          <template v-slot:after>
+            <q-btn color="primary" size="lg" label="Render QR Code" @click="getQRCode" />
+          </template>
+        </q-input>
+        <br>
+        <qrcode-vue v-if="qrcodeData" :value="qrcodeData" size=300 level="H" />
       </q-card-section>
     </q-card>
   </q-page>
@@ -16,19 +16,24 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
+import QrcodeVue from 'qrcode.vue';
 
 export default defineComponent({
   name: 'PageOnboaring',
-  components: {},
+  components: {
+    QrcodeVue
+  },
   setup() {
-    const issuerId = ref("");
+    const issuerId = ref('');
+    const qrcodeData = ref('');
 
     const getQRCode = () => {
-      console.log(issuerId.value);
+      qrcodeData.value = issuerId.value;
     }
 
     return {
       issuerId,
+      qrcodeData,
       getQRCode
     };
   },
