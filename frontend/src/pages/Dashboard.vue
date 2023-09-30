@@ -2,20 +2,23 @@
   <q-page class="row items-center justify-evenly">
     <q-card class="my-card">
       <q-card-section>
-        asd
+        <HomeStateComponent :home="home_state" />
       </q-card-section>
     </q-card>
   </q-page>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
+import HomeStateComponent from 'components/HomeStateComponent.vue';
+import { Home } from 'components/models';
 
 export default defineComponent({
-  name: 'PageIndex',
-  components: {},
+  name: 'PageDashboard',
+  components: { HomeStateComponent },
   setup() {
-    return {};
+    const home_state = ref(new Home());
+    return { home_state };
   },
 });
 </script>

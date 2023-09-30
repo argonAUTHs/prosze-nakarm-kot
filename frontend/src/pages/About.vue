@@ -2,7 +2,7 @@
   <q-page class="row items-center justify-evenly">
     <q-card class="my-card">
       <q-card-section>
-        asd
+        About
       </q-card-section>
     </q-card>
   </q-page>
@@ -12,7 +12,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'PageIndex',
+  name: 'PageAbout',
   components: {},
   setup() {
     return {};
