@@ -1,0 +1,26 @@
+[package]
+name = "corelib"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+pamsm = { version = "0.5.2", features = ["libpam"] }
+syslog = "6.0.1"
+qr2term = "0.3.0"
+controller = { git = "https://github.com/THCLab/keriox" }
+ed25519-dalek = "1.0.1"
+rand = { version = "0.7.3", features = ["std", "getrandom"]}
+serde_json = "1.0"
+serde = "1.0"
+tokio = { version = "1.14.0", features = ["rt", "macros", "rt-multi-thread"] }
+ureq = "2.6.2"
+figment = { version = "0.10", features = ["env", "yaml"] }
+acdc = { git = "https://github.com/THCLab/acdc-rust"}
+thiserror = "1.0.40"
+said = { git = "https://github.com/THCLab/cesrox", tag = "v0.1.4"}
+cesrox = { git = "https://github.com/THCLab/cesrox", tag = "v0.1.4" }
+version = { git = "https://github.com/THCLab/cesrox", tag = "v0.1.4"}
+serde_yaml = "0.9.25"
+tempfile = "3.1"
