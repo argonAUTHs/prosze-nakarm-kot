@@ -1,0 +1,15 @@
+database_path: ./identifier_database
+seed: AJZ7ZLd7unQ4IkMUwE69NXcvDO9rrmmRH_Xk3TPu9BpP
+watcher_oobi:
+- eid: BF2t2NPc1bwptY1hYV0YCib1JjQ11k9jtuaZemecPF5b
+  scheme: http
+  url: http://watcher.sandbox.argo.colossi.network/
+witness_oobi:
+- eid: BDg3H7Sr-eES0XWXiO8nvMxW6mD_1LxLeE1nuiZxhGp4
+  scheme: http
+  url: http://witness2.sandbox.argo.colossi.network/
+messagebox_oobi:
+- eid: BFY1nGjV9oApBzo5Oq5JqjwQsZEQqsCCftzo3WJjMMX-
+  scheme: http
+  url: http://messagebox.sandbox.argo.colossi.network/
+last_index: 0

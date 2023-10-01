@@ -36,6 +36,21 @@ pub fn check_acdc(stream: &str) -> Result<(), AuthorizationError> {
     }
 }
 
+pub fn check(credentials: Vec<String>) -> Result<(), super::api::Error> {
+    match credentials
+        .iter()
+        .map(|cred| check_acdc(cred))
+        .collect::<Result<Vec<_>, AuthorizationError>>()
+    {
+        Ok(_) => Ok(()),
+        Err(AuthorizationError::NotAllowed) => Err(super::api::Error::PremissionDenied),
+        Err(e) => {
+            println!("{}", e);
+            Err(super::api::Error::AuthorizationError)
+        }
+    }
+}
+
 #[test]
 pub fn test_check_acdc() {
     let acdc = r#"{"v":"ACDC10JSON0000d0_","d":"EGzqtlwbkkNAnAVKjdnSeGH2-_1JBFbJXHu-B35bPe7h","i":"EHtuebjH252H9hFmWKVUCEinVJ447ZJgMVebUa9brh_E","ri":"","s":"EnJtassrx8tT9u9g4Y5dOd3VcPGE9UHlAzKfbv3UG_a4","a":{"passed":false}}"#;
