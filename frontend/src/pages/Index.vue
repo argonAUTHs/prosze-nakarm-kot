@@ -2,20 +2,37 @@
   <q-page class="row items-center justify-evenly">
     <q-card class="my-card">
       <q-card-section>
-        asd
+        <div class="qrcode-container">
+          <qrcode-vue
+            v-if="qrcodeData"
+            :value="qrcodeData"
+            size=200
+            level="H" />
+        </div>
       </q-card-section>
     </q-card>
   </q-page>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref, onMounted } from 'vue';
+import QrcodeVue from 'qrcode.vue';
 
 export default defineComponent({
   name: 'PageIndex',
-  components: {},
+  components: {
+    QrcodeVue
+  },
   setup() {
-    return {};
+    const qrcodeData = ref('');
+
+    onMounted(() => {
+      qrcodeData.value = 'message_box_url';
+    });
+
+    return {
+      qrcodeData,
+    };
   },
 });
 </script>
@@ -24,7 +41,11 @@ export default defineComponent({
 .my-card {
   width: 50vw;
   min-width: 500px;
-  height: 60vh;
-  min-height: 400px;
+  max-height: 60vh;
+}
+
+.qrcode-container {
+  display: flex;
+  justify-content: center;
 }
 </style>
