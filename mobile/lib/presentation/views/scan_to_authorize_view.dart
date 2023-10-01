@@ -151,7 +151,7 @@ class _ScanToAuthorizeViewState extends State<ScanToAuthorizeView> {
                   ),
                   child:
                   Text(
-                    'The app will automatically render the form after validating the credential.',
+                    'Scan the QR code of the house to enter it.',
                     textAlign:  TextAlign.center,
                   ),
                 ),

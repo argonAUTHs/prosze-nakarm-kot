@@ -38,13 +38,14 @@ Future<void> initializeDependencies() async {
   final prefs = await SharedPreferences.getInstance();
   var dir = await getLocalPath();
   if(prefs.getBool("firstTime") == null){
-    Ed25519Signer signer = await createKeys("default", prefs);
-    initializeKel(signer, "default", prefs);
     prefs.setString("current_user", "default");
     prefs.setString("default_repo", "https://repository.oca.argo.colossi.network/api/oca-bundles/");
     prefs.setString("default_messagebox_size", "0");
     prefs.setString("default_nickname", "default_nickname");
     prefs.setStringList("default_inbox", []);
+    prefs.setString("default_witness", "http://witness2.sandbox.argo.colossi.network/");
+    Ed25519Signer signer = await createKeys("default", prefs);
+    initializeKel(signer, "default", prefs);
     prefs.setBool("firstTime", false);
   }else{
     await initKel(inputAppDir: dir);

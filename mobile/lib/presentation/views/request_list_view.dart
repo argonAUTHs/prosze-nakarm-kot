@@ -34,13 +34,6 @@ class _RequestListViewState extends State<RequestListView> {
         ),
         centerTitle: true,
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          Navigator.of(context).pushNamed("/scan");
-        },
-        backgroundColor: Colors.blue,
-        child: const Icon(Icons.qr_code_2_outlined, color: Colors.white,size: 40,),
-      ),
       body: BlocProvider.value(
         value: BlocProvider.of<RequestListBloc>(context)..add(const GetRequestList()),
         child: SafeArea(

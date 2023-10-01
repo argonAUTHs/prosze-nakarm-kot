@@ -94,7 +94,7 @@ class _ScanToRequestViewState extends State<ScanToRequestView> {
                     ),
                     child:
                     Text(
-                      'The app will automatically send the request after recognizing valid json.',
+                      'Scan QR code to request access to the house.',
                       textAlign:  TextAlign.center,
                     ),
                   ),
