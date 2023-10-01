@@ -14,24 +14,14 @@ yarn
 quasar dev
 ```
 
-### Lint the files
-
-```bash
-yarn lint
-```
-
-### Format the files
-
-```bash
-yarn format
-```
-
 ### Build the app for production
 
 ```bash
 quasar build
 ```
 
-### Customize the configuration
+## Screenshots
 
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+![Connect](./docs/connect.png)
+![Dashboard](./docs/dashboard.png)
+![Onboarding](./docs/onboarding.png)
