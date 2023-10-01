@@ -14,6 +14,8 @@ The library utilizes the following external libraries:
 
 - [ACDC (Authentic Chain Data Container)](https://trustoverip.github.io/tswg-acdc-specification/draft-ssmith-acdc.html): ACDC enables the proof of authenticity of data contained within a container. This allows tracking the origin of data and ensuring its credibility.
 
+- [OOBI (Out-Of-Band-Introduction)](https://weboftrust.github.io/ietf-oobi/draft-ssmith-oobi.html): provides a discovery mechanism that associates a given URI or URL with a given Identifier.
+
 ## Backend for House Rental Application
 
 The repository also contains a backend for a house rental application. This backend provides the following endpoints:
