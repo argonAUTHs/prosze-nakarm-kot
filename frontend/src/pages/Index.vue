@@ -1,6 +1,10 @@
 <template>
   <q-page class="row items-center justify-evenly">
     <q-card class="my-card">
+      <q-banner dense class="bg-info">
+        <q-icon name="info" />
+        Scan the QR code with TDA app to connect with house.
+      </q-banner>
       <q-card-section>
         <div class="qrcode-container">
           <qrcode-vue

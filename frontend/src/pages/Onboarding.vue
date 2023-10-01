@@ -1,6 +1,10 @@
 <template>
   <q-page class="row items-center justify-evenly">
     <q-card class="my-card">
+      <q-banner dense class="bg-info">
+        <q-icon name="info" />
+        Provide your ID from TDA app.
+      </q-banner>
       <q-card-section>
         <q-input outlined v-model="issuerId" label="Issuer ID">
           <template v-slot:after>
