@@ -8,7 +8,13 @@
           </template>
         </q-input>
         <br>
-        <qrcode-vue v-if="qrcodeData" :value="qrcodeData" size=300 level="H" />
+        <div class="qrcode-container">
+          <qrcode-vue
+            v-if="qrcodeData"
+            :value="qrcodeData"
+            size=200
+            level="H" />
+        </div>
       </q-card-section>
     </q-card>
   </q-page>
@@ -44,7 +50,11 @@ export default defineComponent({
 .my-card {
   width: 50vw;
   min-width: 500px;
-  height: 60vh;
-  min-height: 400px;
+  max-height: 60vh;
+}
+
+.qrcode-container {
+  display: flex;
+  justify-content: center;
 }
 </style>
