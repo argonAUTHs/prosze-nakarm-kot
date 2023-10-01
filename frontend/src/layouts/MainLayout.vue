@@ -55,7 +55,7 @@ const linksList = [
   {
     title: 'About',
     icon: 'info',
-    link: '/#/about',
+    link: 'https://github.com/argonAUTHs/prosze-nakarm-kot#readme',
   },
 ];
 
